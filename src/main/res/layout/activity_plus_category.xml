@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="400dp"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btStatus"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#009624"
+        android:text="+Status" />
+
+
+    <Button
+        android:id="@+id/btWater"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#009624"
+        android:text="+Water" />
+
+    <Button
+        android:id="@+id/btFood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#009624"
+        android:text="+Food" />
+
+    <Button
+        android:id="@+id/btExercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#009624"
+        android:text="+Exercise" />
+
+    <Button
+        android:id="@+id/btWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#009624"
+        android:text="+Weight" />
+
+    <Button
+        android:id="@+id/btNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#009624"
+        android:text="+Notes" />
+
+    <Button
+        android:id="@+id/btCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#009624"
+        android:text="Cancel" />
+</LinearLayout>

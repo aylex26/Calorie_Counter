@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    tools:context=".Meals">
+
+
+    <Button
+        android:id="@+id/btBreakfast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#009624"
+        android:text="Breakfast" />
+
+    <Button
+        android:id="@+id/btLunch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#009624"
+        android:text="Lunch" />
+
+    <Button
+        android:id="@+id/btDinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#009624"
+        android:text="Dinner" />
+
+    <Button
+        android:id="@+id/btCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#870000"
+        android:text="Cancel" />
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    tools:context=".MyInfo">
+
+
+    <EditText
+        android:id="@+id/edProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Progress"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btAddWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#009624"
+        android:text="Add Weight" />
+
+    <TextView
+        android:id="@+id/btGoals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Goals" />
+
+    <Button
+        android:id="@+id/btUpdateGoals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#009624"
+        android:text="Update Goals" />
+
+    <Button
+        android:id="@+id/btMyItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#009624"
+        android:text="My Items" />
+
+    <Button
+        android:id="@+id/btMyPosts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#009624"
+        android:text="My Posts" />
+
+    <Button
+        android:id="@+id/btCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:backgroundTint="#009624"
+        android:text="Cancel" />
+</LinearLayout>
