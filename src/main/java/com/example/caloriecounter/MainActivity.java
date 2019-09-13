@@ -23,12 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tvDatePickerMainActivity;
     Button plusCategory, btInfo, btMyInfo;
-    EditText tvFood;
 
-    public static final String[] FOOD = new String[]{
-            "Carne", "Oua", "Mezeluri", "Branzeturi", "Lactate", "Fructe", "Legume", "Nuci si seminte", "Peste", "Grasimi si indulcitori", "Suplimente si batoane", "Conserve",
-            "Gustari si dulciuri", "Mancare gatita", "Bauturi Alcoolice"
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +35,7 @@ public class MainActivity extends AppCompatActivity {
         btMyInfo = findViewById(R.id.btMyInfo);
 
 
-        AutoCompleteTextView tvFood = findViewById(R.id.tvFood);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, FOOD);
-        tvFood.setAdapter(adapter);
+
 
 
         plusCategory.setOnClickListener(new View.OnClickListener() {
