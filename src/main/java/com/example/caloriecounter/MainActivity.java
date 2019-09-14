@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     TextView tvDatePickerMainActivity;
     Button plusCategory, btInfo, btMyInfo;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +32,6 @@ public class MainActivity extends AppCompatActivity {
         plusCategory = findViewById(R.id.plusAddCategory);
         btInfo = findViewById(R.id.btUpdateGoals);
         btMyInfo = findViewById(R.id.btMyInfo);
-
-
-
-
 
         plusCategory.setOnClickListener(new View.OnClickListener() {
             @Override

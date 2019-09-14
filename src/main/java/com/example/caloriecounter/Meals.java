@@ -28,13 +28,13 @@ public class Meals extends AppCompatActivity {
         btLunch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Meals.this, com.example.caloriecounter.Status.class));
+                startActivity(new Intent(Meals.this, com.example.caloriecounter.StatusAdapter.class));
             }
         });
         btDinner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Meals.this, com.example.caloriecounter.Status.class));
+                startActivity(new Intent(Meals.this, com.example.caloriecounter.StatusAdapter.class));
             }
         });
         btCancel.setOnClickListener(new View.OnClickListener() {
