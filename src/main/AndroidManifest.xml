@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StatusAdapter"></activity>
+        <activity android:name=".MealsGeneral"></activity>
+        <activity android:name=".StatusAdapter" />
         <activity android:name=".statusAdapter" />
         <activity android:name=".Status" />
         <activity android:name=".Meals" />

@@ -1,5 +1,7 @@
 package com.example.caloriecounter;
 
+
+// get si set pentru backendless
 public class Note {
     private String status;
 

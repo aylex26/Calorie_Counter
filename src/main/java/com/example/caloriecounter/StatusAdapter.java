@@ -1,12 +1,20 @@
 package com.example.caloriecounter;
+
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.backendless.Backendless;
+import com.backendless.async.callback.AsyncCallback;
+import com.backendless.exceptions.BackendlessFault;
+
 import java.lang.ref.SoftReference;
+import java.util.ArrayList;
+import java.util.List;
 
 public class StatusAdapter extends AppCompatActivity {
 
@@ -1460,14 +1468,47 @@ public class StatusAdapter extends AppCompatActivity {
 
         tvFood = findViewById(R.id.tvFood);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(StatusAdapter.this, android.R.layout.simple_list_item_1, FOOD);
-        tvFood.setAdapter(adapter);
+        Toast.makeText(this, FOOD.length + " " + CALORII.length + " " + PROTEINE.length + "  " + GRASIMI.length + "  " + CARBS.length, Toast.LENGTH_SHORT).show();
 
 
-        Toast.makeText(this, FOOD.length + " " + CALORII.length + " " +PROTEINE.length+ "  " + GRASIMI.length+ "  " + CARBS.length, Toast.LENGTH_SHORT).show();
+        // CePrimescDinBAzadeDate din backendless
+        Backendless.Persistence.of(Food.class).find(new AsyncCallback<List<Food>>() {
+            @Override
+            public void handleResponse(List<Food> CePrimescDinBAzadeDate) {
+                List<String> names = new ArrayList<>();
+                for (int i = 0; i < CePrimescDinBAzadeDate.size(); i++) {
+                    names.add(CePrimescDinBAzadeDate.get(i).getName());
+                }
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(StatusAdapter.this, android.R.layout.simple_list_item_1, names);
+                tvFood.setAdapter(adapter);
 
+            }
 
+            @Override
+            public void handleFault(BackendlessFault fault) {
 
+            }
+        });
+
+//       Populare baze de date online pentru food, proteine, calorii, carbs
+//        for(int i = 0 ; i<FOOD.length;i++)
+//        {
+//            Food food = new Food();
+//            food.setName(FOOD[i]);
+//            food.setCalorii(CALORII[i]);
+//            food.setCarbo(CARBS[i]);
+//            food.setGrasimi(GRASIMI[i]);
+//            food.setProteine(PROTEINE[i]);
+//
+//            Backendless.Persistence.save(food, new AsyncCallback<Food>() {
+//                @Override
+//                public void handleResponse(Food response) {
+//                }
+//                @Override
+//                public void handleFault(BackendlessFault fault) {
+//                }
+//            });
+//        }
 
     }
 }

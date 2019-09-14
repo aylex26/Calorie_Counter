@@ -1,7 +1,11 @@
 package com.example.caloriecounter;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -11,11 +15,13 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -23,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tvDatePickerMainActivity;
     Button plusCategory, btInfo, btMyInfo;
+    SharedPreferences editor = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
         plusCategory = findViewById(R.id.plusAddCategory);
         btInfo = findViewById(R.id.btUpdateGoals);
         btMyInfo = findViewById(R.id.btMyInfo);
+        editor = getSharedPreferences("YAS", MODE_PRIVATE);
+
+
+        //valoarea pe care o ia la primul run de apk
+        if (editor.getBoolean("firstRunApp", true)) {
+            editor.edit().putString("goals", "2000c").apply();
+            editor.edit().putString("greutate", "75").apply();
+            editor.edit().putBoolean("firstRunApp", false).apply();
+        }
 
         plusCategory.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
 
@@ -93,4 +110,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_CANCELED) {
+            startActivity(getIntent());
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        }
+    }
 }

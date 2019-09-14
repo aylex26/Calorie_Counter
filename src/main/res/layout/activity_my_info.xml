@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="300dp"
-    android:layout_height="300dp"
+    android:layout_width="400dp"
+    android:layout_height="400dp"
     android:layout_gravity="center_horizontal|center_vertical"
     android:orientation="vertical"
     tools:context=".MyInfo">
@@ -16,7 +16,8 @@
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
         android:hint="Progress"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/btAddWeight"
@@ -26,12 +27,13 @@
         android:backgroundTint="#009624"
         android:text="Add Weight" />
 
-    <TextView
-        android:id="@+id/btGoals"
+    <EditText
+        android:id="@+id/edGoals"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal|center_vertical"
-        android:hint="Goals" />
+        android:hint="Goals"
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/btUpdateGoals"
@@ -58,7 +60,7 @@
         android:text="My Posts" />
 
     <Button
-        android:id="@+id/btCancel"
+        android:id="@+id/btCancel1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#ffffff"
