@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="400dp"
-    android:layout_height="400dp"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
     android:layout_gravity="center_horizontal|center_vertical"
     android:orientation="vertical"
     tools:context=".MyInfo">
@@ -23,9 +23,9 @@
         android:id="@+id/btAddWeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#ffffff"
         android:backgroundTint="#009624"
-        android:text="Add Weight" />
+        android:text="Add Weight"
+        android:textColor="#ffffff" />
 
     <EditText
         android:id="@+id/edGoals"
@@ -39,31 +39,37 @@
         android:id="@+id/btUpdateGoals"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#ffffff"
         android:backgroundTint="#009624"
-        android:text="Update Goals" />
+        android:text="Update Goals"
+        android:textColor="#ffffff" />
 
-    <Button
-        android:id="@+id/btMyItems"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:backgroundTint="#009624"
-        android:text="My Items" />
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btMyPosts"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:backgroundTint="#009624"
-        android:text="My Posts" />
+        <Button
+            android:id="@+id/btMyPosts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009624"
+            android:text="My Posts"
+            android:textColor="#ffffff" />
 
-    <Button
-        android:id="@+id/btCancel1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:backgroundTint="#009624"
-        android:text="Cancel" />
+        <Button
+            android:id="@+id/btMyItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009624"
+            android:text="My Items"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btCancel1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#870000"
+            android:text="Cancel"
+            android:textColor="#ffffff" />
+    </LinearLayout>
 </LinearLayout>

@@ -9,35 +9,43 @@
     tools:context=".Meals">
 
 
-    <Button
-        android:id="@+id/btBreakfast1"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:backgroundTint="#009624"
-        android:text="Breakfast" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btLunch1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:backgroundTint="#009624"
-        android:text="Lunch" />
+        <Button
+            android:id="@+id/btBreakfast1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009624"
+            android:text="Breakfast"
+            android:textColor="#ffffff" />
 
-    <Button
-        android:id="@+id/btDinner1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:backgroundTint="#009624"
-        android:text="Dinner" />
+        <Button
+            android:id="@+id/btLunch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009624"
+            android:text="Lunch"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btDinner1"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009624"
+            android:text="Dinner"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btCancel1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#ffffff"
         android:backgroundTint="#870000"
-        android:text="Cancel" />
+        android:text="Cancel"
+        android:textColor="#ffffff" />
+
 </LinearLayout>

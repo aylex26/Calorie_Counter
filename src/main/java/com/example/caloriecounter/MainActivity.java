@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.media.midi.MidiDeviceService;
+import android.net.InetAddresses;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -15,11 +18,13 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
@@ -82,13 +87,27 @@ public class MainActivity extends AppCompatActivity {
         value.add(new PieEntry(60f, "lunch"));
         value.add(new PieEntry(20f, "dinner"));
 
+
         PieDataSet pieDataSet = new PieDataSet(value, "");
         PieData pieData = new PieData(pieDataSet);
         pieChart.setData(pieData);
         pieDataSet.setColors(ColorTemplate.JOYFUL_COLORS);
+        pieChart.setClickable(true);
+        pieChart.setTouchEnabled(true);
+        pieChart.setCenterText("ListView");
+
+
+
+//        pieChart.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, MyInfo.class);
+//                Toast.makeText(MainActivity.this, "test1", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
 
         tvDatePickerMainActivity = findViewById(R.id.tvDatePickerMainActivity);
-
         final Calendar myCalendar = Calendar.getInstance();
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 

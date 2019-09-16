@@ -1,66 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="400dp"
-    android:layout_height="400dp"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
     android:layout_gravity="center_horizontal|center_vertical"
     android:orientation="vertical">
 
 
-    <Button
-        android:id="@+id/btStatus"
-
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:backgroundTint="#009624"
-        android:text="+Status" />
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/btWater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009624"
+            android:text="+Water"
+            android:textColor="#ffffff" />
 
-    <Button
-        android:id="@+id/btWater"
+        <Button
+            android:id="@+id/btFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009624"
+            android:text="+Food"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:backgroundTint="#009624"
-        android:text="+Water" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btFood"
+        <Button
+            android:id="@+id/btWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009624"
+            android:text="+Weight"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btExercise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009624"
+            android:text="+Exercise"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:backgroundTint="#009624"
-        android:text="+Food" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btExercise"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:backgroundTint="#009624"
-        android:text="+Exercise" />
+        <Button
+            android:id="@+id/btStatus"
 
-    <Button
-        android:id="@+id/btWeight"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:backgroundTint="#009624"
-        android:text="+Weight" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009624"
+            android:text="+Status"
+            android:textColor="#ffffff" />
 
-    <Button
-        android:id="@+id/btNotes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:backgroundTint="#009624"
-        android:text="+Notes" />
+        <Button
+            android:id="@+id/btNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009624"
+            android:text="+Notes"
+            android:textColor="#ffffff" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btCancel1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:backgroundTint="#009624"
-        android:text="Cancel" />
+        android:backgroundTint="#870000"
+        android:text="Cancel"
+        android:textColor="#ffffff" />
+
 </LinearLayout>
